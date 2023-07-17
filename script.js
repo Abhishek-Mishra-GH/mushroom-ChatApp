@@ -14,8 +14,14 @@ showIncomingMsg("🕊️", "");
 let user = prompt("Enter your name: ");
 
 
-let socket = io.connect(url);
-socket.on('connect', console.log('connected'));
+let socket = io.connect(test);
+socket.on('connect', () => {
+  socket.emit('new-user', {name: user});
+});
+
+socket.on('new-user', (data) => {
+  alert(`${data.name} is connected!`);
+})
 //socket.emit('test', "Hii")
 
 function showIncomingMsg(msg, name) {
