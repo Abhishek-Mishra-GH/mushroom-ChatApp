@@ -93,7 +93,6 @@ nav {
 }
 
 .wrap {
-  border: 2px solid blue;
   display: flex;
   justify-content: flex-end;
 }
