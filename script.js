@@ -15,7 +15,7 @@ function showIncomingMsg(msg) {
  
   main.append(remoteMsg);
   main.append(br);
-  remoteMsg.focus()
+  remoteMsg.scrollIntoView();
 }
 
 function showLocalMsg(msg) {
