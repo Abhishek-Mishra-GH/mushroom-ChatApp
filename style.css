@@ -19,6 +19,7 @@ nav {
   width: 100vw;
   height: 6vh;
   top: 0;
+  left: 0;
   justify-content: center;
   align-items: center;
   background-color: #1c1d1f;
@@ -34,6 +35,7 @@ nav {
   align-items: center;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100vw;
   height: 6vh;
   min-height: 50px;
@@ -70,9 +72,11 @@ nav {
  /* border: 3px solid blue; */
   overflow-y: auto;
   width: 100vw;
-  height: 80vh;
+  height: auto;
+  max-height: 80vh;
   position: fixed;
   top: 6vh;
+  left: 0;
 }
 
 .msgRemote, .msgLocal {

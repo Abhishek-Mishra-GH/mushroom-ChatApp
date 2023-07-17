@@ -6,6 +6,7 @@ socket.on('connect', console.log('connected'));
 //socket.emit('test', "Hii")
 
 const main = document.getElementById('main');
+const inputMsg = document.getElementById('inputMsg');
 
 function showIncomingMsg(msg) {
   let remoteMsg = document.createElement('div');
@@ -38,7 +39,7 @@ function showLocalMsg(msg) {
  wrap.append(localMsg);
  main.append(br);
  localMsg.scrollIntoView();
- 
+ inputMsg.focus();
 }
 
 socket.on('bc', (data) => {
@@ -47,7 +48,6 @@ socket.on('bc', (data) => {
 });
 
 function sendmsg() {
-  let inputMsg = document.getElementById('inputMsg');
   let localMsg = inputMsg.value;
   socket.emit('send-msg', {msg: localMsg});
   inputMsg.value = "";
