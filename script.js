@@ -25,9 +25,11 @@ socket.on('new-user', (data) => {
 //socket.emit('test', "Hii")
 
 function showIncomingMsg(msg, name) {
-  let nameSpan = document.createElement('span');
-  nameSpan.innerText = name + ": ";
+  let nameSpan = document.createElement('div');
+  nameSpan.innerText = name;
   nameSpan.style.color = colors[0];
+  nameSpan.style.fontSize = "10px";
+  
   if(name == "") nameSpan.innerText = "";
   
   let remoteMsg = document.createElement('div');
@@ -37,6 +39,7 @@ function showIncomingMsg(msg, name) {
   main.append(remoteMsg);
   
   remoteMsg.append(nameSpan);
+  remoteMsg.append(br)
   remoteMsg.append(msg);
   
   main.append(br);
