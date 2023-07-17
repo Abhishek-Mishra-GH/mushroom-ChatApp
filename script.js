@@ -1,12 +1,20 @@
 const url = "https://mushroom-lgyq.onrender.com";
 const test = 'http://localhost:3000';
+let count = 0;
+
+const main = document.getElementById('main');
+const inputMsg = document.getElementById('inputMsg');
+const navbar = document.getElementById('navbar');
+
+
+showIncomingMsg("🕊️");
+showLocalMsg("🕊️");
+showIncomingMsg("🕊️");
+
 
 let socket = io.connect(url);
 socket.on('connect', console.log('connected'));
 //socket.emit('test', "Hii")
-
-const main = document.getElementById('main');
-const inputMsg = document.getElementById('inputMsg');
 
 function showIncomingMsg(msg) {
   let remoteMsg = document.createElement('div');
@@ -44,10 +52,12 @@ function showLocalMsg(msg) {
 
 socket.on('bc', (data) => {
   console.log(data);
+  count++
   showIncomingMsg(data.msg);
 });
 
 function sendmsg() {
+  count++
   let localMsg = inputMsg.value;
   socket.emit('send-msg', {msg: localMsg});
   inputMsg.value = "";

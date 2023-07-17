@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
     <title>Mushroom</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous">
@@ -12,12 +12,15 @@
     </script>
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       Chat
       <span id="roomID"></span>
     </nav>
     
     <div id="main" class="main">
+      <div class="msgRemote">
+        🕊️
+      </div>
       <div class="wrap">
         <div class="msgLocal">
           🕊️
