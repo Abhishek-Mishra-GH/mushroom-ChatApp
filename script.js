@@ -14,7 +14,7 @@ showIncomingMsg("🕊️", "");
 let user = prompt("Enter your name: ");
 
 
-let socket = io.connect(test);
+let socket = io.connect(url);
 socket.on('connect', () => {
   socket.emit('new-user', {name: user});
 });
