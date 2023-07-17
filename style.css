@@ -6,6 +6,7 @@
 }
 
 body {
+  max-width: 600px;
   overflow-x: hidden;
   background-color: #2d3438;
   display: flex;
