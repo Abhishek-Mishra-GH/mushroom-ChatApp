@@ -39,7 +39,7 @@ nav {
   min-height: 50px;
 }
 
-.msg-input input {
+.msg-input #inputMsg {
   border-radius: 25px;
   flex: 0.95;
   height: 100%;
@@ -93,7 +93,7 @@ nav {
 }
 
 .wrap {
-  width: 100vw;
+  border: 2px solid blue;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
