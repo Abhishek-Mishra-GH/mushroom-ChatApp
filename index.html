@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Mushroom</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous">
+    </script>
+    <script type="module">
+      import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
+    </script>
+  </head>
+  <body>
+    <nav>
+      Chat
+      <span id="roomID"></span>
+    </nav>
+    
+    <div id="main" class="main"></div>
+ 
+    <div class="msg-input">
+      <input type="text" id="inputMsg" placeholder="message"/>
+      <button type="reset" onclick="sendmsg()">Send </button>
+    </div>
+    
+    <script src="script.js" type="text/javascript" charset="utf-8"> 
+    </script>
+      
+  </body>
+</html> 
