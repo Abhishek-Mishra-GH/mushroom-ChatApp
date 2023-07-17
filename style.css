@@ -8,7 +8,7 @@
 
 body {
   max-width: 600px;
-  height: 80vh;
+  height: 82vh;
   overflow-x: hidden;
   background-color: #2d3438;
   display: flex;
@@ -17,11 +17,8 @@ body {
 
 nav {
   display: flex;
-  position: fixed;
   width: 100vw;
-  height: 6vh;
-  top: 0;
-  left: 0;
+  min-height: 40px; /* */
   justify-content: center;
   align-items: center;
   background-color: #1c1d1f;
@@ -70,12 +67,9 @@ nav {
 }
 
 .main {
-  position: fixed;
-  top: 7vh;
-  left: 0; 
   overflow-y: auto;
   width: 100vw;
-  height: 78vh;
+  max-height: 81vh;
 }
 
 .msgRemote, .msgLocal {
