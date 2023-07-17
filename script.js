@@ -11,7 +11,7 @@ showIncomingMsg("🕊️", "");
 showLocalMsg("🕊️", "");
 showIncomingMsg("🕊️", "");
 
-let user = prompt("Please enter your name: ");
+let user = prompt("Enter your name: ");
 
 
 let socket = io.connect(url);
@@ -23,13 +23,16 @@ function showIncomingMsg(msg, name) {
   nameSpan.innerText = name + ": ";
   nameSpan.style.color = colors[0];
   if(name == "") nameSpan.innerText = "";
+  
   let remoteMsg = document.createElement('div');
   let br = document.createElement('br');
   remoteMsg.classList.add("msgRemote");
-  remoteMsg.innerText = msg;
  
-  main.append(nameSpan);
   main.append(remoteMsg);
+  
+  remoteMsg.append(nameSpan);
+  remoteMsg.append(msg);
+  
   main.append(br);
   remoteMsg.scrollIntoView();
 }
