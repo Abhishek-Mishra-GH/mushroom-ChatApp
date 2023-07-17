@@ -59,6 +59,7 @@ socket.on('bc', (data) => {
 function sendmsg() {
   count++
   let localMsg = inputMsg.value;
+  if(localMsg == "") return;
   socket.emit('send-msg', {msg: localMsg});
   inputMsg.value = "";
   showLocalMsg(localMsg);
